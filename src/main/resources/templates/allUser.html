@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+<p th:text="'Hello Thymeleaf'"></p>
+<table>
+    <tr>
+        <td><a href="地址" id='t1'>内容</a></td>
+    </tr>
+</table>
+
+<img th:src="@{/image/a.jpeg}"/>
+
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>用户名</td>
+        <td>密码</td>
+    </tr>
+    <tr th:each="user:${user}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.userName}"></td>
+        <td th:text="${user.passWord}"></td>
+    </tr>
+</table>
+</body>
+
+</html>
